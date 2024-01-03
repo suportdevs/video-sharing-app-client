@@ -9,7 +9,10 @@ const Container = styled.div`
 `;
 const Main = styled.div`
     flex: 7;
+    background-color: ${({ theme }) => theme.bg};
 `;
+
+const Wrapper = styled.div``;
 
 const Home = () => {
     const [darkMode, setDarkMode] = useState(true);
@@ -19,6 +22,7 @@ const Home = () => {
                 <Menu darkMode={darkMode} setDarkMode={setDarkMode}></Menu>
                 <Main>
                     <Navbar></Navbar>
+                    <Wrapper>
                     <h1>main</h1>
                     <h1>main</h1>
                     <h1>main</h1>
@@ -94,6 +98,7 @@ const Home = () => {
                     <h1>main</h1>
                     <h1>main</h1>
                     <h1>main</h1>
+                    </Wrapper>
                 </Main>
             </Container>
         </ThemeProvider>
