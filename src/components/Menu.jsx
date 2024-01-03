@@ -16,27 +16,30 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import FlagIcon from '@mui/icons-material/Flag';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import YouTubeImg from "../images/youtube.png";
 import { Home } from "@mui/icons-material";
 
 const Container = styled.div`
     flex: 1;
-    padding: 15px 25px;
-    font-size: 14px;
-    background: #0f0f0f;
-    color: white;
+    background-color: ${({theme}) =>theme.bg};
     height: 100vh;
+    color: ${({theme}) =>theme.text};
+    font-size: 14px;
     position: sticky;
     top: 0;
-`
+`;
+const Wrapper = styled.div`
+    padding: 15px 25px;
+`;
 const LogoContainer = styled.div`
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
     margin-bottom: 10px;
-`
-const MenuToggleIcon = styled.div``
+`;
+const MenuToggleIcon = styled.div``;
 
 const Logo = styled.div`
     display: flex;
@@ -44,7 +47,7 @@ const Logo = styled.div`
     gap:8px;
     font-size: 22px;
     font-weight: bold;
-`
+`;
 const Img = styled.img`
     width: 30px;
 `;
@@ -56,24 +59,30 @@ const Item = styled.div`
     padding: 7px 0px;
     cursor: pointer;
     font-weight: 500;
-`
+`;
 const Hr = styled.hr`
     margin: 15px 0;
-    border: 0.5px solid #f5f5f5;
-`
-const Login = styled.div``
+    border: 0.5px solid ${({theme}) =>theme.soft};
+`;
+const Login = styled.div``;
 const Button = styled.button`
     background: transparent;
-    border: 1px solid blue;
+    border: 2px solid blue;
     border-radius: 5px;
     display: flex;
     align-items: center;
-    color: white;
-`
+    gap: 5px;
+    color: ${({theme}) =>theme.text};
+    padding: 5px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+`;
 
-const Menu = () => {
+const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
+            <Wrapper>
+                
             <LogoContainer>
                 <MenuToggleIcon>
                     <MenuIcon />
@@ -103,8 +112,9 @@ const Menu = () => {
                 <WhatshotIcon /> Trending
             </Item>
             <Hr />
-            <Login>Sign in to like videos, comment, and subscribe.</Login>
-            <Button><AccountCircleOutlinedIcon /> Sign In</Button>
+            <Login>Sign in to like videos, comment, and subscribe.
+                <Button><AccountCircleOutlinedIcon /> Sign In</Button>
+            </Login>
             <Hr />
             <Item>
                 <MusicNoteIcon /> Music
@@ -134,9 +144,10 @@ const Menu = () => {
             <Item>
                 <HelpOutlineIcon /> Help
             </Item>
-            <Item>
-                <LightModeIcon /> Light Mode
+            <Item onClick={() => setDarkMode(!darkMode)}>
+                {darkMode ? <><LightModeIcon /> Light Mode</> : <><DarkModeOutlinedIcon /> Dark Mode</> }
             </Item>
+            </Wrapper>
         </Container>
     );
 }

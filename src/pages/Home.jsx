@@ -1,6 +1,8 @@
-import styled from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
+import { useState } from "react";
+import { darkTheme, lightTheme } from "../utilies/theme";
 
 const Container = styled.div`
     display: flex;
@@ -10,88 +12,91 @@ const Main = styled.div`
 `;
 
 const Home = () => {
+    const [darkMode, setDarkMode] = useState(true);
     return (
-        <Container>
-            <Menu></Menu>
-            <Main>
-                <Navbar></Navbar>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-                <h1>main</h1>
-            </Main>
-        </Container>
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+            <Container>
+                <Menu darkMode={darkMode} setDarkMode={setDarkMode}></Menu>
+                <Main>
+                    <Navbar></Navbar>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                    <h1>main</h1>
+                </Main>
+            </Container>
+        </ThemeProvider>
         );
 }
 
