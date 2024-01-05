@@ -19,6 +19,7 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import YouTubeImg from "../images/youtube.png";
 import { Home } from "@mui/icons-material";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
     flex: 1;
@@ -82,71 +83,72 @@ const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
             <Wrapper>
-                
-            <LogoContainer>
-                <MenuToggleIcon>
-                    <MenuIcon />
-                </MenuToggleIcon>
-                <Logo>
-                    <Img src={YouTubeImg} alt="YouTube" />
-                     YouTube
-                </Logo>
-            </LogoContainer>
-            <Item>
-                <Home /> Home
-            </Item>
-            <Item>
-                <ExploreIcon /> Explore
-            </Item>
-            <Item>
-                <SubscriptionsIcon /> Subscriptions
-            </Item>
-            <Hr />
-            <Item>
-                <VideoLibraryIcon /> Library
-            </Item>
-            <Item>
-                <HistoryIcon /> History
-            </Item>
-            <Item>
-                <WhatshotIcon /> Trending
-            </Item>
-            <Hr />
-            <Login>Sign in to like videos, comment, and subscribe.
-                <Button><AccountCircleOutlinedIcon /> Sign In</Button>
-            </Login>
-            <Hr />
-            <Item>
-                <MusicNoteIcon /> Music
-            </Item>
-            <Item>
-                <SportsEsportsIcon /> Gaming
-            </Item>
-            <Item>
-                <EmojiEventsIcon /> Sports
-            </Item>
-            <Item>
-                <MovieFilterIcon /> Movies
-            </Item>
-            <Item>
-                <NewspaperIcon /> News
-            </Item>
-            <Item>
-                <LiveTvIcon /> Live
-            </Item>
-            <Hr />
-            <Item>
-                <SettingsSuggestIcon /> Setting
-            </Item>
-            <Item>
-                <FlagIcon /> Report
-            </Item>
-            <Item>
-                <HelpOutlineIcon /> Help
-            </Item>
-            <Item onClick={() => setDarkMode(!darkMode)}>
-                {darkMode ? <><LightModeIcon /> Light Mode</> : <><DarkModeOutlinedIcon /> Dark Mode</> }
-            </Item>
+                <LogoContainer>
+                    <MenuToggleIcon>
+                        <MenuIcon />
+                    </MenuToggleIcon>
+                    <Link to="/" style={{textDecoration: 'none'}}>
+                        <Logo>
+                            <Img src={YouTubeImg} alt="YouTube" />
+                            YouTube
+                        </Logo>
+                    </Link>
+                </LogoContainer>
+                <Item>
+                    <Home /> Home
+                </Item>
+                <Item>
+                    <ExploreIcon /> Explore
+                </Item>
+                <Item>
+                    <SubscriptionsIcon /> Subscriptions
+                </Item>
+                <Hr />
+                <Item>
+                    <VideoLibraryIcon /> Library
+                </Item>
+                <Item>
+                    <HistoryIcon /> History
+                </Item>
+                <Item>
+                    <WhatshotIcon /> Trending
+                </Item>
+                <Hr />
+                <Login>Sign in to like videos, comment, and subscribe.
+                    <Button><AccountCircleOutlinedIcon /> Sign In</Button>
+                </Login>
+                <Hr />
+                <Item>
+                    <MusicNoteIcon /> Music
+                </Item>
+                <Item>
+                    <SportsEsportsIcon /> Gaming
+                </Item>
+                <Item>
+                    <EmojiEventsIcon /> Sports
+                </Item>
+                <Item>
+                    <MovieFilterIcon /> Movies
+                </Item>
+                <Item>
+                    <NewspaperIcon /> News
+                </Item>
+                <Item>
+                    <LiveTvIcon /> Live
+                </Item>
+                <Hr />
+                <Item>
+                    <SettingsSuggestIcon /> Setting
+                </Item>
+                <Item>
+                    <FlagIcon /> Report
+                </Item>
+                <Item>
+                    <HelpOutlineIcon /> Help
+                </Item>
+                <Item onClick={() => setDarkMode(!darkMode)}>
+                    {darkMode ? <><LightModeIcon /> Light Mode</> : <><DarkModeOutlinedIcon /> Dark Mode</> }
+                </Item>
             </Wrapper>
         </Container>
     );
