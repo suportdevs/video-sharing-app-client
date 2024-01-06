@@ -19,6 +19,7 @@ const CommentSort = styled.button`
     align-items: center;
     gap:5px;
     border: none;
+    color: ${({theme}) => theme.text};
     cursor: pointer;
 `;
 const NewCommentWrapper = styled.div`

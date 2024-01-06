@@ -5,9 +5,11 @@ import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
 import Comments from "../components/Comments";
+import Card from "../components/Card";
 
 const Container =styled.div`
     display: flex;
+    gap: 20px;
     padding: 30px;
 `;
 const Content = styled.div`
@@ -44,7 +46,7 @@ const ChannelTexts = styled.div``;
 const ChannelName = styled.h2`
     font-size: 20px;
     font-weight: 500;
-    color: ${({theme})=> theme.text};
+    color: ${({theme}) => theme.text};
     cursor: pointer;
 `;
 const ChannelSubscribers = styled.p`
@@ -86,7 +88,9 @@ const Description = styled.div`
 const DescriptionTopText = styled.div`
     margin-bottom: 8px;
 `;
-const DescriptionText = styled.p``;
+const DescriptionText = styled.p`
+    color: ${({theme}) => theme.text};
+`;
 const Recomended = styled.div`
     flex: 2;
 `;
@@ -128,7 +132,30 @@ const Video = () => {
                 <Comments />
             </Content>
 
-            <Recomended>Recomended</Recomended>
+            <Recomended>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+                <Card type="sm"/>
+            </Recomended>
         </Container>
     );
 }

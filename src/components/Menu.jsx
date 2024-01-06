@@ -60,6 +60,9 @@ const Item = styled.div`
     padding: 7px 0px;
     cursor: pointer;
     font-weight: 500;
+    &:hover{
+        background-color: ${({theme}) => theme.soft};
+    }
 `;
 const Hr = styled.hr`
     margin: 15px 0;
