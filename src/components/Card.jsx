@@ -37,7 +37,7 @@ const ChannelName = styled.h2`
 `;
 const Info = styled.div`
     font-size: 20px;
-    color: ${({theme}) => theme.softText};
+    color: ${({theme}) => theme.textSoft};
 `;
 
 const Card = () => {

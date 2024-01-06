@@ -87,7 +87,7 @@ const Menu = ({darkMode, setDarkMode}) => {
                     <MenuToggleIcon>
                         <MenuIcon />
                     </MenuToggleIcon>
-                    <Link to="/" style={{textDecoration: 'none'}}>
+                    <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
                         <Logo>
                             <Img src={YouTubeImg} alt="YouTube" />
                             YouTube
