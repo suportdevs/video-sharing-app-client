@@ -4,6 +4,7 @@ import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import ReplyOutlinedIcon from "@mui/icons-material/ReplyOutlined";
 import PlaylistAddOutlinedIcon from '@mui/icons-material/PlaylistAddOutlined';
 import FileDownloadOutlinedIcon from '@mui/icons-material/FileDownloadOutlined';
+import Comments from "../components/Comments";
 
 const Container =styled.div`
     display: flex;
@@ -40,7 +41,7 @@ const ChannelImg = styled.img`
     cursor: pointer;
 `;
 const ChannelTexts = styled.div``;
-const ChannelName = styled.h1`
+const ChannelName = styled.h2`
     font-size: 20px;
     font-weight: 500;
     color: ${({theme})=> theme.text};
@@ -81,7 +82,7 @@ const Description = styled.div`
     padding: 10px 0;
     font-size: 14px;
     color: ${({theme}) => theme.text};
-`
+`;
 const DescriptionTopText = styled.div`
     margin-bottom: 8px;
 `;
@@ -92,24 +93,17 @@ const Recomended = styled.div`
 
 
 const Video = () => {
+
     return (
         <Container>
             <Content>
                 <VideoContainer>
-                <iframe
-                    width="100%"
-                    height="720"
-                    src="https://www.youtube.com/embed/k3Vfj-e1Ma4"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                ></iframe>
+                    <iframe width="100%" height="720" src="https://www.youtube.com/embed/yIaXoop8gl4?si=Img3wJAnHIA2-S6s&amp;start=3354" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </VideoContainer>
                 <VideoTitle>React Video Sharing App UI Design | Youtube UI Clone with React</VideoTitle>
                 <ChannelContainer>
                     <CannelInfo>
-                        <ChannelImg />
+                        <ChannelImg src="https://yt3.ggpht.com/yti/APfAmoE-Q0ZLJ4vk3vqmV4Kwp0sbrjxLyB8Q4ZgNsiRH=s88-c-k-c0x00ffffff-no-rj-mo" />
                         <ChannelTexts>
                             <ChannelName>You Tube</ChannelName>
                             <ChannelSubscribers>1.5M Subscribers</ChannelSubscribers>
@@ -131,6 +125,7 @@ const Video = () => {
                     </DescriptionTopText>
                     <DescriptionText>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore voluptatem quas laudantium harum, iure nulla, iusto dolorum, commodi modi maxime debitis cum architecto. Aliquid magni sit nobis enim atque tempore dolorem deleniti saepe esse, omnis autem, qui aspernatur inventore fuga reiciendis facilis. Facilis expedita consequuntur minus amet aliquam dolorum vel dignissimos. Similique ipsam reprehenderit, quo vero, pariatur hic voluptas vel quidem nulla minima cumque voluptates natus facere mollitia minus! Quia atque officia sit animi, blanditiis incidunt rem reprehenderit similique quaerat nihil exercitationem mollitia aspernatur voluptatum, impedit itaque, tempore ratione. Laborum et minima voluptatibus. Perspiciatis ipsum dolores adipisci sapiente inventore quae!</DescriptionText>
                 </Description>
+                <Comments />
             </Content>
 
             <Recomended>Recomended</Recomended>

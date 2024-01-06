@@ -53,7 +53,7 @@ const Navbar = () => {
         <Container>
             <Wrapper>
                 <Search>
-                    <Input Placeholder="Search"/>
+                    <Input placeholder="Search"/>
                     <SearchOutlinedIcon />
                 </Search>
                 <Button><AccountCircleOutlinedIcon /> Sign In</Button>
