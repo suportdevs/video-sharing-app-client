@@ -117,9 +117,11 @@ const Menu = ({darkMode, setDarkMode}) => {
                     <WhatshotIcon /> Trending
                 </Item>
                 <Hr />
-                <Login>Sign in to like videos, comment, and subscribe.
-                    <Button><AccountCircleOutlinedIcon /> Sign In</Button>
-                </Login>
+                <Link to="/sigin" style={{textDecoration: 'none', color: 'inherit'}}>
+                    <Login>Sign in to like videos, comment, and subscribe.
+                        <Button><AccountCircleOutlinedIcon /> Sign In</Button>
+                    </Login>
+                </Link>
                 <Hr />
                 <Item>
                     <MusicNoteIcon /> Music

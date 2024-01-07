@@ -102,7 +102,7 @@ const Video = () => {
         <Container>
             <Content>
                 <VideoContainer>
-                    <iframe width="100%" height="720" src="https://www.youtube.com/embed/yIaXoop8gl4?si=Img3wJAnHIA2-S6s&amp;start=3354" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                    <iframe width="100%" height="520" src="https://www.youtube.com/embed/yIaXoop8gl4?si=Img3wJAnHIA2-S6s&amp;start=3354" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                 </VideoContainer>
                 <VideoTitle>React Video Sharing App UI Design | Youtube UI Clone with React</VideoTitle>
                 <ChannelContainer>

@@ -43,7 +43,7 @@ const Button = styled.button`
     gap: 3px;
     border: none;
     background-color: transparent;
-    color: ${({theme}) => theme.text};
+    color: ${({theme}) => theme.textSoft};
     cursor: pointer;
 `;
 const Comment = () => {
