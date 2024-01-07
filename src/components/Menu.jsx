@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import MenuIcon from '@mui/icons-material/Menu';
 import ExploreIcon from '@mui/icons-material/Explore';
 import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
 import VideoLibraryIcon from '@mui/icons-material/VideoLibrary';
@@ -17,40 +16,20 @@ import FlagIcon from '@mui/icons-material/Flag';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
-import YouTubeImg from "../images/youtube.png";
 import { Home } from "@mui/icons-material";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`
-    flex: 1;
+    flex: 2;
     background-color: ${({theme}) =>theme.bgLighter};
-    height: 100vh;
+    height: calc(100vh - 55px);
     color: ${({theme}) =>theme.text};
     font-size: 14px;
     position: sticky;
-    top: 0;
+    top: 55px;
 `;
 const Wrapper = styled.div`
     padding: 15px 25px;
-`;
-const LogoContainer = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-    margin-bottom: 10px;
-`;
-const MenuToggleIcon = styled.div``;
-
-const Logo = styled.div`
-    display: flex;
-    align-items: center;
-    gap:8px;
-    font-size: 22px;
-    font-weight: bold;
-`;
-const Img = styled.img`
-    width: 30px;
 `;
 
 const Item = styled.div`
@@ -86,17 +65,6 @@ const Menu = ({darkMode, setDarkMode}) => {
     return (
         <Container>
             <Wrapper>
-                <LogoContainer>
-                    <MenuToggleIcon>
-                        <MenuIcon />
-                    </MenuToggleIcon>
-                    <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
-                        <Logo>
-                            <Img src={YouTubeImg} alt="YouTube" />
-                            YouTube
-                        </Logo>
-                    </Link>
-                </LogoContainer>
                 <Item>
                     <Home /> Home
                 </Item>

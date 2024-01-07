@@ -9,14 +9,16 @@ import Video from "./pages/Video";
 import SignIn from "./pages/SignIn";
 
 const Container = styled.div`
-    display: flex;
+    // display: flex;
 `;
 const Main = styled.div`
-    flex: 7;
+    display: flex;
     background-color: ${({ theme }) => theme.bg};
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+    flex: 10;
+`;
 
 const App = () => {
     const [darkMode, setDarkMode] = useState(true);
@@ -24,9 +26,9 @@ const App = () => {
         <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
             <Container>
                 <BrowserRouter>
-                <Menu darkMode={darkMode} setDarkMode={setDarkMode}></Menu>
+                <Navbar></Navbar>
                 <Main>
-                    <Navbar></Navbar>
+                    <Menu darkMode={darkMode} setDarkMode={setDarkMode}></Menu>
                     <Wrapper>
                         <Routes>
                             <Route path="/">

@@ -1,7 +1,9 @@
 import SearchOutlinedIcon from '@mui/icons-material/SearchOutlined';
 import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import MenuIcon from '@mui/icons-material/Menu';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import YouTubeImg from "../images/youtube.png";
 
 const Container = styled.div`
     position: sticky;
@@ -12,10 +14,29 @@ const Container = styled.div`
 const Wrapper = styled.div`
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 0 20px;
     height: 100%;
     position: relative;
+`;
+const LogoContainer = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: ${({ theme }) => theme.text};
+`;
+const MenuToggleIcon = styled.div``;
+
+const Logo = styled.div`
+    display: flex;
+    align-items: center;
+    gap:8px;
+    font-size: 22px;
+    font-weight: bold;
+`;
+const Img = styled.img`
+    width: 30px;
 `;
 const Search = styled.div`
     position: absolute;
@@ -29,6 +50,7 @@ const Search = styled.div`
     padding: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    color: ${({ theme }) => theme.text};
 `;
 const Input = styled.input`
     padding: 5px;
@@ -53,6 +75,17 @@ const Navbar = () => {
     return (
         <Container>
             <Wrapper>
+                <LogoContainer>
+                    <MenuToggleIcon>
+                        <MenuIcon />
+                    </MenuToggleIcon>
+                    <Link to="/" style={{textDecoration: 'none', color: 'inherit'}}>
+                        <Logo>
+                            <Img src={YouTubeImg} alt="YouTube" />
+                            YouTube
+                        </Logo>
+                    </Link>
+                </LogoContainer>
                 <Search>
                     <Input placeholder="Search"/>
                     <SearchOutlinedIcon />
